@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Example Integration of React App using Docker
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
