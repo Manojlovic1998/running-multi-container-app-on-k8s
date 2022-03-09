@@ -34,6 +34,11 @@ pgClient.on("connect", (client) => {
     .catch((err) => console.error(err));
 });
 
-// Route
+// Redis Setup
+const redis = require("redis");
+const redisClient = redis.createClient({
+  url: `redis://${keys.redisHost}:${keys.redisPort}`,
+});
 
-// Listen on port
+// A publisher which will send messages via channel
+const redisPublisher = redisClient.duplicate();
