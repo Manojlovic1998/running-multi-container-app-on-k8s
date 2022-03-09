@@ -1,6 +1,8 @@
 # Example Integration of React App using Docker
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is an example project of multi-container application. A topic of the project is a very basic implementation of fib function to calculate the fib value.
+
+It combines Docker, Express, PostgreSQL, Redis and React.
 
 ## Available Scripts
 
