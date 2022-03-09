@@ -42,3 +42,46 @@ const redisClient = redis.createClient({
 
 // A publisher which will send messages via channel
 const redisPublisher = redisClient.duplicate();
+// Express Route Handlers
+
+// Test route
+app.get("/", (req, res) => {
+  res.send("Hi!");
+});
+
+// Query and return all of the values/indices that have ever been
+// submitted to the postgres instance.
+app.get("/values/all", async (req, rep) => {
+  const values = await pgClient.query("SELECT * from values");
+
+  res.send(values.rows);
+});
+
+// Return values/indices that have been submitted to backend through Redis
+app.get("/values/current", async (req, res) => {
+  redisClient.hgetall("value", (err, values) => {
+    res.send(values);
+  });
+});
+
+app.post("/values", async (req, res) => {
+  const index = req.body.value;
+  // Check if the value of index is not too high
+  // preventing worker lockout
+  if (parseInt(index) > 40) {
+    return res.status(422).send("Index too high");
+  }
+
+  redisClient.hset("values", index, "Nothing yet!");
+
+  // Publish message
+  redisPublisher.publish("insert", index);
+
+  pgClient.query("INSERT INTO values(number) VALUES($1)", [index]);
+  res.send({ working: true });
+});
+// Listen on port
+
+app.listen(5000, (err) => {
+  console.log("Listening");
+});
