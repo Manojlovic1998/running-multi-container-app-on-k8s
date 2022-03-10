@@ -1,11 +1,14 @@
+import { Fragment } from "react";
 import "./App.css";
 import Fib from "./Components/Fib";
+import { Link } from "react-router-dom";
 
 function App() {
   return (
-    <div>
+    <Fragment>
+      <Link to="/">Home</Link>
       <Fib />
-    </div>
+    </Fragment>
   );
 }
 
