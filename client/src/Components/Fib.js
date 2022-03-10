@@ -40,7 +40,7 @@ const Fib = () => {
     // Fetch all the values
     const allValues = fetchIndexes;
     setSeenIndexes(allValues);
-  }, [fetchValues, setValues]);
+  }, []);
 
   const onIndexSubmit = async (event) => {
     event.preventDefault();
