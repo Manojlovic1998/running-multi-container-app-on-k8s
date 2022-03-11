@@ -1,19 +1,42 @@
 version: "3"
 services:
-  web:
+  pg:
+    image: postgres:latest
+    environment:
+      # pg user is default "postgres"
+      POSTGRES_PASSWORD: example
+  redis:
+    image: redis:latest
+  server:
     build:
-      context: .
       dockerfile: Dockerfile.dev
-    ports:
-      - "3000:3000"
+      context: ./server
     volumes:
       - /app/node_modules
-      - .:/app
-  tests:
+      - ./server:/app
+    environment:
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - PGUSER=postgres
+      - PGHOST=pg
+      - PGDATABASE=postgres
+      - PGPASSWORD=example
+      - PGPORT=5432
+  client:
+    stdin_open: true
     build:
-      context: .
       dockerfile: Dockerfile.dev
+      context: ./client
     volumes:
       - /app/node_modules
-      - .:/app
-    command: ["npm", "run", "test"]
+      - ./client:/app
+  worker:
+    build:
+      dockerfile: Dockerfile.dev
+      context: ./worker
+    volumes:
+      - /app/node_modules
+      - ./worker:/app
+    environment:
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
