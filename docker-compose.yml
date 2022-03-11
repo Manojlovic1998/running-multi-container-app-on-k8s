@@ -7,7 +7,7 @@ services:
       POSTGRES_PASSWORD: example
   redis:
     image: redis:latest
-  server:
+  api:
     build:
       dockerfile: Dockerfile.dev
       context: ./server
