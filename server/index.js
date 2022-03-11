@@ -51,7 +51,7 @@ app.get("/", (req, res) => {
 
 // Query and return all of the values/indices that have ever been
 // submitted to the postgres instance.
-app.get("/values/all", async (req, rep) => {
+app.get("/values/all", async (req, res) => {
   const values = await pgClient.query("SELECT * from values");
 
   res.send(values.rows);
@@ -59,25 +59,28 @@ app.get("/values/all", async (req, rep) => {
 
 // Return values/indices that have been submitted to backend through Redis
 app.get("/values/current", async (req, res) => {
-  redisClient.hgetall("value", (err, values) => {
-    res.send(values);
-  });
+  await redisClient.connect();
+  const values = await redisClient.hGetAll("value");
+  res.send(values);
+  await redisClient.quit();
 });
 
 app.post("/values", async (req, res) => {
-  const index = req.body.value;
+  const index = req.body.index;
   // Check if the value of index is not too high
   // preventing worker lockout
   if (parseInt(index) > 40) {
     return res.status(422).send("Index too high");
   }
-
-  redisClient.hset("values", index, "Nothing yet!");
-
+  await redisClient.connect();
+  await redisClient.hSet("values", index, "Nothing yet!");
+  await redisClient.quit();
   // Publish message
-  redisPublisher.publish("insert", index);
+  await redisPublisher.connect();
+  await redisPublisher.publish("insert", index);
+  await redisPublisher.quit();
 
-  pgClient.query("INSERT INTO values(number) VALUES($1)", [index]);
+  await pgClient.query("INSERT INTO values(number) VALUES($1)", [index]);
   res.send({ working: true });
 });
 // Listen on port
