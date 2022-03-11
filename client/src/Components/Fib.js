@@ -3,16 +3,6 @@ import { useState, useEffect, Fragment } from "react";
 import axios from "axios";
 import IndexForm from "./Forms/IndexForm";
 
-const fetchValues = async () => {
-  const values = await axios.get("/api/values/current");
-  return values;
-};
-
-const fetchIndexes = async () => {
-  const seenIndexes = await axios.get("/api/values/all");
-  return seenIndexes;
-};
-
 const renderValues = (keys) => {
   const entries = [];
 
@@ -32,14 +22,21 @@ const Fib = () => {
   const [seenIndexes, setSeenIndexes] = useState([]);
   const [index, setIndex] = useState("");
 
+  const fetchValues = async () => {
+    const values = await axios.get("/api/values/current");
+    setValues(values.data);
+  };
+
+  const fetchIndexes = async () => {
+    const seenIndexes = await axios.get("/api/values/all");
+    setSeenIndexes(seenIndexes.data);
+  };
+
   useEffect(() => {
     // On load
     // Fetch current values
-    const currentValues = fetchValues();
-    setValues(currentValues);
-    // Fetch all the values
-    const allValues = fetchIndexes;
-    setSeenIndexes(allValues);
+    fetchValues();
+    fetchIndexes();
   }, []);
 
   const onIndexSubmit = async (event) => {
@@ -61,7 +58,11 @@ const Fib = () => {
       />
       <div>
         <h4>Indices I have seen:</h4>
-        <p>{seenIndexes.map(({ number }) => number).join(", ")}</p>
+        <p>
+          {seenIndexes
+            ? seenIndexes.map(({ number }) => number).join(", ")
+            : ""}
+        </p>
       </div>
       <div>
         <h4>Calculated Values:</h4>
