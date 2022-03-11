@@ -3,22 +3,8 @@ import { useState, useEffect, Fragment } from "react";
 import axios from "axios";
 import IndexForm from "./Forms/IndexForm";
 
-const renderValues = (keys) => {
-  const entries = [];
-
-  for (let key in keys) {
-    entries.push(
-      <div key={key}>
-        For index {key} I calculated {keys[key]}
-      </div>
-    );
-  }
-
-  return entries;
-};
-
 const Fib = () => {
-  const [values, setValues] = useState({});
+  const [values, setValues] = useState([]);
   const [seenIndexes, setSeenIndexes] = useState([]);
   const [index, setIndex] = useState("");
 
@@ -45,7 +31,8 @@ const Fib = () => {
     await axios.post("/api/values", {
       index: index,
     });
-
+    fetchValues();
+    fetchIndexes();
     setIndex("");
   };
 
@@ -66,7 +53,13 @@ const Fib = () => {
       </div>
       <div>
         <h4>Calculated Values:</h4>
-        {renderValues(values)}
+        {values
+          ? Object.keys(values).map((key) => (
+              <div key={key}>
+                For index {key} I calculated {values[key]}
+              </div>
+            ))
+          : ""}
       </div>
     </Fragment>
   );
