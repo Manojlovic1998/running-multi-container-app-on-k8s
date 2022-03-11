@@ -4,12 +4,14 @@ const IndexForm = (props) => {
   return (
     <div>
       <form onSubmit={props.onIndexSubmit}>
-        <label for="index">Enter your index:</label>
+        <label htmlFor="index">Enter your index:</label>
         <input
           type="text"
+          id="index"
           value={props.index}
           onChange={(event) => props.setIndex(event.target.value)}
         />
+        <button>Submit</button>
       </form>
     </div>
   );
