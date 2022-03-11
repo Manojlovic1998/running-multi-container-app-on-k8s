@@ -60,7 +60,7 @@ app.get("/values/all", async (req, res) => {
 // Return values/indices that have been submitted to backend through Redis
 app.get("/values/current", async (req, res) => {
   await redisClient.connect();
-  const values = await redisClient.hGetAll("value");
+  const values = await redisClient.hGetAll("values");
   res.send(values);
   await redisClient.quit();
 });
