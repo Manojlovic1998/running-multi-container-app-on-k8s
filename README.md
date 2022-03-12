@@ -57,6 +57,21 @@ The Express server serves as api layer that communicates with Redis and Postgres
 - [x] Route to query and send back data from Redis.
 - [x] Route to receive, validate and record user submitted data.
 
+### **Worker app**
+
+Worker instance listens to Redis **_instance_** channel. **\*Instance** channel is established by Express `domain/values` route. There the publisher sends index via channel message. Worker picks up the message (index) and uses the following algorithm to find the number at the given index in Fibonacci Sequence.
+
+**Algorithm**
+
+```javascript
+// Basic solution to fib number
+// Takes index and returns its value
+function fib(index) {
+  if (index < 2) return 1;
+  return fib(index - 1) + fib(index - 2);
+}
+```
+
 ## :bulb: Technologies
 
 **Technologies used:**
