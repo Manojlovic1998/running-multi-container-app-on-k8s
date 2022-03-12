@@ -11,6 +11,8 @@ This is Docker example project of multi-container application. A topic of the pr
 
 ### **Client React App**
 
+Client is a frontend Fibonacci index number value calculator application. It is built with the help of React technology. It's main purpose is to facilitate user input action where the data from the input is sent to the server (api). It also is fetching the data from the api on page load with the help of axios library.
+
 - Low Fidelity Wireframe:
 
   - ![Diagram preview of app functionality and sections data origin](/assets/diagrams/client-low-fid.drawio.png)
