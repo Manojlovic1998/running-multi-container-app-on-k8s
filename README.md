@@ -39,7 +39,15 @@ Client is a frontend Fibonacci index number value calculator application. It is 
 The Express server serves as api layer that communicates with Redis and Postgres and passes information to the React app from them.
 
 - Express api diagram:
+
   - ![Diagram preview of express app functionality and services it fetches data from to server back to react app](/assets/diagrams/express-diagram.drawio.png)
+
+**Express Routes Description:**
+
+- `domain/` is a test route that was used to test connection to the app during early development.
+- `domain/values/all` queries and sends back all of the data from Postgres db instance. GET
+- `domain/values/current` queries and sends back all of the values from Redis instance. GET
+- `domain/values` receives users submitted data, checks if index is within worker limit to prevent bottleneck, sets a placeholder data in Redis instance, and creates a channel over which it sends the index value that worker picks up to do the calculation.
 
 ## :bulb: Technologies
 
