@@ -36,6 +36,8 @@ Client is a frontend Fibonacci index number value calculator application. It is 
 
 ### **Server/API ExpressJS App**
 
+The Express server serves as api layer that communicates with Redis and Postgres and passes information to the React app from them.
+
 - Express api diagram:
   - ![Diagram preview of express app functionality and services it fetches data from to server back to react app](/assets/diagrams/express-diagram.drawio.png)
 
