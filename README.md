@@ -1,4 +1,4 @@
-# Example Integration of React App using Docker :whale:
+# Integration of React App using Docker :whale:
 
 This is Docker example project of multi-container application. A topic of the project is a very basic implementation of fib function to calculate the fib value.
 
