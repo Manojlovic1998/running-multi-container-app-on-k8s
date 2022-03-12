@@ -74,6 +74,43 @@ function fib(index) {
 
 ### **Nginx**
 
+Nginx is used to enforce routing. It routes the incoming request traffic to the appropriate application. The `/api/` prefix to request url is used as a way to distinguish between request for Express and the request for the React server.
+
+**Nginx Default Config**
+
+```
+upstream client {
+    server client:3000;
+}
+
+upstream api {
+    server api:5000;
+}
+
+server {
+    listen 80;
+
+    location / {
+        proxy_pass http://client;
+    }
+
+    location /ws {
+        proxy_pass http://client;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+    }
+
+    location /api {
+        rewrite /api/(.*) /$1 break;
+        proxy_pass http://api;
+    }
+}
+```
+
+**Nginx proxy diagram**
+![Nginx diagram preview showcasing request routes](/assets/diagrams/nginx-proxy-diagram.png)
+
 ## :bulb: Technologies
 
 **Technologies used:**
