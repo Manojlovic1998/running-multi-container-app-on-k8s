@@ -61,7 +61,7 @@ The Express server serves as api layer that communicates with Redis and Postgres
 
 Worker instance listens to Redis **_instance_** channel. **\*Instance** channel is established by Express `domain/values` route. There the publisher sends index via channel message. Worker picks up the message (index) and uses the following algorithm to find the number at the given index in Fibonacci Sequence.
 
-**Algorithm**
+**Simple Algorithm**
 
 ```javascript
 // Basic solution to fib number
