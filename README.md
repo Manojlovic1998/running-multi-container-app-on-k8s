@@ -49,6 +49,13 @@ The Express server serves as api layer that communicates with Redis and Postgres
 - `domain/values/current` queries and sends back all of the values from Redis instance. GET
 - `domain/values` receives users submitted data, checks if index is within worker limit to prevent bottleneck, sets a placeholder data in Redis instance, and creates a channel over which it sends the index value that worker picks up to do the calculation. POST
 
+**Features:**
+
+- [x] Test route.
+- [x] Route to query and send back data from Postgres.
+- [x] Route to query and send back data from Redis.
+- [x] Route to receive, validate and record user submitted data.
+
 ## :bulb: Technologies
 
 - Technologies used:
