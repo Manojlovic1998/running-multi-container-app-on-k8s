@@ -72,6 +72,8 @@ function fib(index) {
 }
 ```
 
+### <img src="/assets/technologies/nginx.png" height=16px width=16px> **Nginx**
+
 ## :bulb: Technologies
 
 **Technologies used:**
