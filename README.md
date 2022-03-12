@@ -1,20 +1,28 @@
-# Example Integration of React App using Docker
+# Example Integration of React App using Docker :whale:
 
 This is Docker example project of multi-container application. A topic of the project is a very basic implementation of fib function to calculate the fib value.
 
-## High Fidelity Wireframes
-
-- Bootstrap: Extra large > 1200px
-  ![Desktop preview of client application UI](/assets/wireframes/bootstrap-extra-large-1200px.png)
-
-- Bootstrap: Extra small < 576px
-  <br>
-  ![Mobile preview of client application UI](/assets/wireframes/bootstrap-extra-small-576px.png)
-
-## Local Development Container Diagrams
+## Local Development Container Diagram
 
 - Simple diagram of intercommunication between different container application instances.
   ![Diagram preview of intercommunication between applications](/assets/diagrams/docker-fib-calc.drawio.png)
+
+## Applications Writeup
+
+### **Client React App**
+
+- Low Fidelity Wireframe:
+
+  - ![Diagram preview of app functionality and sections data origin](/assets/diagrams/client-low-fid.drawio.png)
+
+- High Fidelity Wireframes:
+
+  - Bootstrap: Extra large > 1200px
+    ![Desktop preview of client application UI](/assets/wireframes/bootstrap-extra-large-1200px.png)
+
+  - Bootstrap: Extra small < 576px
+    <br>
+    ![Mobile preview of client application UI](/assets/wireframes/bootstrap-extra-small-576px.png)
 
 ## Technologies
 
