@@ -72,7 +72,7 @@ function fib(index) {
 }
 ```
 
-### <img src="/assets/technologies/nginx.png" height=32px width=32px> **Nginx**
+### **Nginx**
 
 ## :bulb: Technologies
 
