@@ -9,3 +9,8 @@ This is Docker example project of multi-container application. A topic of the pr
 
 - Bootstrap: Extra small < 576px
   ![Mobile preview of client application UI](/assets/wireframes/bootstrap-extra-small-576px.png)
+
+## Local Development Container Diagrams
+
+- Simple diagram of intercommunication between different container application instances.
+  ![Diagram preview of intercommunication between applications](/assets/diagrams/docker-fib-calc.drawio.png)
