@@ -34,6 +34,11 @@ Client is a frontend Fibonacci index number value calculator application. It is 
   - [ ] Responsive design
   - [x] Api calls to ExpressJS api app.
 
+### **Server/API ExpressJS App**
+
+- Express api diagram:
+  - ![Diagram preview of express app functionality and services it fetches data from to server back to react app](/assets/diagrams/express-diagram.drawio.png)
+
 ## :bulb: Technologies
 
 - Technologies used:
