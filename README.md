@@ -2,12 +2,12 @@
 
 This is Docker example project of multi-container application. A topic of the project is a very basic implementation of fib function to calculate the fib value.
 
-## Local Development Container Diagram
+## Local Development Container Diagram :office:
 
 - Simple diagram of intercommunication between different container application instances.
   ![Diagram preview of intercommunication between applications](/assets/diagrams/docker-fib-calc.drawio.png)
 
-## Applications Writeup
+## Applications Writeup :page_with_curl:
 
 ### **Client React App**
 
@@ -24,7 +24,7 @@ This is Docker example project of multi-container application. A topic of the pr
     <br>
     ![Mobile preview of client application UI](/assets/wireframes/bootstrap-extra-small-576px.png)
 
-## Technologies
+## Technologies :space_invader:
 
 - Technologies used:
   <br>
