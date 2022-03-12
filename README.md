@@ -13,34 +13,35 @@ This is Docker example project of multi-container application. A topic of the pr
 
 Client is a frontend Fibonacci index number value calculator application. It is built with the help of React technology. It's main purpose is to facilitate user input action where the data from the input is sent to the server (api). It also is fetching the data from the api on page load with the help of axios library.
 
-- Low Fidelity Wireframe:
+**Low Fidelity Wireframe:**
 
-  - ![Diagram preview of app functionality and sections data origin](/assets/diagrams/client-low-fid.drawio.png)
+- ![Diagram preview of app functionality and sections data origin](/assets/diagrams/client-low-fid.drawio.png)
 
-- High Fidelity Wireframes:
+**High Fidelity Wireframes:**
 
-  - Bootstrap: Extra large > 1200px
-    ![Desktop preview of client application UI](/assets/wireframes/bootstrap-extra-large-1200px.png)
+- Bootstrap: Extra large > 1200px
+  ![Desktop preview of client application UI](/assets/wireframes/bootstrap-extra-large-1200px.png)
 
-  - Bootstrap: Extra small < 576px
-    <br>
-    ![Mobile preview of client application UI](/assets/wireframes/bootstrap-extra-small-576px.png)
+- Bootstrap: Extra small < 576px
+  <br>
+  ![Mobile preview of client application UI](/assets/wireframes/bootstrap-extra-small-576px.png)
 
-- **Features:**
-  - [x] Home page
-  - [x] Form for index input
-  - [ ] Navigation bar with custom logo
-  - [x] Section containing seen indexes and calculated index values
-  - [ ] Responsive design
-  - [x] Api calls to ExpressJS api app.
+**Features:**
+
+- [x] Home page
+- [x] Form for index input
+- [ ] Navigation bar with custom logo
+- [x] Section containing seen indexes and calculated index values
+- [ ] Responsive design
+- [x] Api calls to ExpressJS api app.
 
 ### **Server/API ExpressJS App**
 
 The Express server serves as api layer that communicates with Redis and Postgres and passes information to the React app from them.
 
-- Express api diagram:
+**Express api diagram:**
 
-  - ![Diagram preview of express app functionality and services it fetches data from to server back to react app](/assets/diagrams/express-diagram.drawio.png)
+- ![Diagram preview of express app functionality and services it fetches data from to server back to react app](/assets/diagrams/express-diagram.drawio.png)
 
 **Express Routes Description:**
 
@@ -58,15 +59,15 @@ The Express server serves as api layer that communicates with Redis and Postgres
 
 ## :bulb: Technologies
 
-- Technologies used:
-  <br>
-  ![Nginx Icon](/assets/technologies/nginx.png)
-  ![Docker Icon](/assets/technologies/docker.png)
-  ![React Icon](/assets/technologies/react.png)
-  ![Redis Icon](/assets/technologies/redis.png)
-  ![Express Icon](/assets/technologies/expressjs.png)
-  ![Postgresql Icon](/assets/technologies/postgresql.png)
-  ![Nodemon Icon](/assets/technologies/nodemon.png)
-  ![Axios Icon](/assets/technologies/axios.png)
-  ![Bootstrap Icon](/assets/technologies/bootstrap.png)
-  ![Figma Icon](/assets/technologies/figma.png)
+**Technologies used:**
+<br>
+![Nginx Icon](/assets/technologies/nginx.png)
+![Docker Icon](/assets/technologies/docker.png)
+![React Icon](/assets/technologies/react.png)
+![Redis Icon](/assets/technologies/redis.png)
+![Express Icon](/assets/technologies/expressjs.png)
+![Postgresql Icon](/assets/technologies/postgresql.png)
+![Nodemon Icon](/assets/technologies/nodemon.png)
+![Axios Icon](/assets/technologies/axios.png)
+![Bootstrap Icon](/assets/technologies/bootstrap.png)
+![Figma Icon](/assets/technologies/figma.png)
