@@ -24,6 +24,14 @@ This is Docker example project of multi-container application. A topic of the pr
     <br>
     ![Mobile preview of client application UI](/assets/wireframes/bootstrap-extra-small-576px.png)
 
+- **Features:**
+  - [x] Home page
+  - [x] Form for index input
+  - [ ] Navigation bar with custom logo
+  - [x] Section containing seen indexes and calculated index values
+  - [ ] Responsive design
+  - [x] Api calls to ExpressJS api app.
+
 ## :bulb: Technologies
 
 - Technologies used:
