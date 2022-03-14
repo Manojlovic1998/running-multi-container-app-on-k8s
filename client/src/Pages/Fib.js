@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useEffect, Fragment } from "react";
 import axios from "axios";
-import IndexForm from "./Forms/IndexForm";
+import IndexForm from "../Components/Forms/IndexForm";
 
 const Fib = () => {
   const [values, setValues] = useState([]);
