@@ -2,6 +2,8 @@ import React from "react";
 import { useState, useEffect, Fragment } from "react";
 import axios from "axios";
 import IndexForm from "../Components/Forms/IndexForm";
+import { Container, Row, Col } from "react-bootstrap";
+import classes from "./Fib.module.css";
 
 const Fib = () => {
   const [values, setValues] = useState([]);
@@ -37,31 +39,13 @@ const Fib = () => {
   };
 
   return (
-    <Fragment>
+    <div className={`px-4 pt-5 ${classes.heroBg}`}>
       <IndexForm
         onIndexSubmit={onIndexSubmit}
         index={index}
         setIndex={setIndex}
       />
-      <div>
-        <h4>Indices I have seen:</h4>
-        <p>
-          {seenIndexes
-            ? seenIndexes.map(({ number }) => number).join(", ")
-            : ""}
-        </p>
-      </div>
-      <div>
-        <h4>Calculated Values:</h4>
-        {values
-          ? Object.keys(values).map((key) => (
-              <div key={key}>
-                For index {key} I calculated {values[key]}
-              </div>
-            ))
-          : ""}
-      </div>
-    </Fragment>
+    </div>
   );
 };
 
