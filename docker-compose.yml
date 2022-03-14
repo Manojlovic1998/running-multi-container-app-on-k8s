@@ -9,7 +9,7 @@ services:
     image: redis:latest
   api:
     build:
-      dockerfile: Dockerfile.dev
+      dockerfile: Dockerfile
       context: ./server
     volumes:
       - /app/node_modules
@@ -25,7 +25,7 @@ services:
   client:
     stdin_open: true
     build:
-      dockerfile: Dockerfile.dev
+      dockerfile: Dockerfile
       context: ./client
     volumes:
       - /app/node_modules
@@ -34,7 +34,7 @@ services:
       - WDS_SOCKET_PORT=0
   worker:
     build:
-      dockerfile: Dockerfile.dev
+      dockerfile: Dockerfile
       context: ./worker
     volumes:
       - /app/node_modules
@@ -48,7 +48,7 @@ services:
       - api
       - client
     build:
-      dockerfile: Dockerfile.dev
+      dockerfile: Dockerfile
       context: ./nginx
     ports:
       - "8080:80"

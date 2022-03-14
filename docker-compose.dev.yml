@@ -1,0 +1,18 @@
+version: "3"
+services:
+  api:
+    build:
+      dockerfile: Dockerfile.dev
+      context: ./server
+  client:
+    build:
+      dockerfile: Dockerfile.dev
+      context: ./client
+  worker:
+    build:
+      dockerfile: Dockerfile.dev
+      context: ./worker
+  nginx:
+    build:
+      dockerfile: Dockerfile.dev
+      context: ./nginx
