@@ -1,0 +1,37 @@
+.form-wrapper {
+  border: 2px solid rgba(4, 9, 33, 0.3);
+  border-radius: 12px;
+}
+
+.input-label {
+  color: #6c757d;
+}
+
+.index-input.form-control {
+  max-width: 349px;
+  min-height: 44px;
+  border: 2px solid rgba(4, 9, 33, 0.42);
+}
+
+.form-group-wrapper {
+  max-width: 349px;
+  margin: auto;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.form-heading {
+  max-width: 349px;
+  margin-left: auto;
+  margin-right: auto;
+}
