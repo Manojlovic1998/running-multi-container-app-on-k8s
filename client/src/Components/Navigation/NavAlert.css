@@ -7,3 +7,7 @@
   z-index: 2;
   margin-left: 1rem;
 }
+
+.bg-warning-alert {
+  background-color: rgba(255, 249, 240, 1);
+}

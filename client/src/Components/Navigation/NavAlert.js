@@ -7,8 +7,11 @@ const NavAlert = () => {
 
   if (show) {
     return (
-      <Row className={"d-none d-lg-flex"}>
-        <Alert className={"mb-0 pt-3 pb-3 alert"} variant="warning">
+      <Row className={"d-none d-lg-flex w-100 m-0"}>
+        <Alert
+          className={"mb-0 pt-3 pb-3 alert bg-warning-alert"}
+          variant="warning"
+        >
           <p className="mb-0 text-center">
             This is a dummy Docker example project. Worker that does the
             calculation is limited by the simple algorithmic solution. Use of

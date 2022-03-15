@@ -1,0 +1,11 @@
+.borderBottomNav {
+  border-bottom: 2px solid #040921;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color: rgba(4, 9, 33, 0.1);
+}
+
+.navLogo {
+  font-size: 16px;
+  font-weight: 600;
+}
