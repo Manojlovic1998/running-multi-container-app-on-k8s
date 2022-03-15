@@ -9,7 +9,7 @@ const NavAlert = () => {
     return (
       <Row className={"d-none d-lg-flex w-100 m-0"}>
         <Alert
-          className={"mb-0 pt-3 pb-3 alert bg-warning-alert"}
+          className={"mb-0 pt-3 pb-3 alert bg-warning-alert text-black"}
           variant="warning"
         >
           <p className="mb-0 text-center">
