@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useEffect, Fragment } from "react";
 import axios from "axios";
 import IndexForm from "../Components/Forms/IndexForm";
+import Information from "../Components/Information/Information";
 import { Container, Row, Col } from "react-bootstrap";
 import classes from "./Fib.module.css";
 
@@ -39,13 +40,22 @@ const Fib = () => {
   };
 
   return (
-    <div className={`px-4 pt-5 ${classes.heroBg}`}>
-      <IndexForm
-        onIndexSubmit={onIndexSubmit}
-        index={index}
-        setIndex={setIndex}
-      />
-    </div>
+    <Fragment>
+      <div className={`px-4 pt-5 ${classes.heroBg}`}>
+        <IndexForm
+          onIndexSubmit={onIndexSubmit}
+          index={index}
+          setIndex={setIndex}
+        />
+      </div>
+      <Container>
+        <Row>
+          <Col lg={6} className={"mx-auto mt-5"}>
+            <Information values={values} seenIndexes={seenIndexes} />
+          </Col>
+        </Row>
+      </Container>
+    </Fragment>
   );
 };
 
