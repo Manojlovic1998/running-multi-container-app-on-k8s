@@ -1,22 +1,25 @@
 import { Fragment } from "react";
 
-const Information = () => {
+const Information = (props) => {
   return (
     <Fragment>
-      <div>
-        <h4>Indices I have seen:</h4>
-        <p>
-          {seenIndexes
-            ? seenIndexes.map(({ number }) => number).join(", ")
+      <div className={"mb-5"}>
+        <h2 className={"fw-bolder fs-5"}>Indices I have seen:</h2>
+        <p className={"mt-4"}>
+          {props.seenIndexes
+            ? props.seenIndexes.map(({ number }) => number).join(", ")
             : ""}
         </p>
       </div>
-      <div>
-        <h4>Calculated Values:</h4>
-        {values
-          ? Object.keys(values).map((key) => (
+      <hr />
+      <div className="mt-5 pb-5">
+        <h2 className={"fw-bolder fs-5"}>Calculated Values:</h2>
+        {props.values
+          ? Object.keys(props.values).map((key) => (
               <div key={key}>
-                For index {key} I calculated {values[key]}
+                <p className={"mt-4"}>
+                  For index {key} I calculated {props.values[key]}
+                </p>
               </div>
             ))
           : ""}
