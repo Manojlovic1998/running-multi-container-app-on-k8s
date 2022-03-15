@@ -1,11 +1,11 @@
 import { Fragment } from "react";
-
+import "./Information.css";
 const Information = (props) => {
   return (
     <Fragment>
       <div className={"mb-5"}>
         <h2 className={"fw-bolder fs-5"}>Indices I have seen:</h2>
-        <p className={"mt-4"}>
+        <p className={"mt-3"}>
           {props.seenIndexes
             ? props.seenIndexes.map(({ number }) => number).join(", ")
             : ""}
@@ -17,7 +17,7 @@ const Information = (props) => {
         {props.values
           ? Object.keys(props.values).map((key) => (
               <div key={key}>
-                <p className={"mt-4"}>
+                <p className={"mt-3"}>
                   For index {key} I calculated {props.values[key]}
                 </p>
               </div>

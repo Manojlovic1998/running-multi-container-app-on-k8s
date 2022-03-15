@@ -1,0 +1,3 @@
+hr:not([size]) {
+  height: 2px;
+}
