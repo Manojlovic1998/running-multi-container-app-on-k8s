@@ -1,0 +1,9 @@
+.alert {
+  display: flex;
+  justify-content: center;
+}
+
+.alert > .btn-close {
+  z-index: 2;
+  margin-left: 1rem;
+}

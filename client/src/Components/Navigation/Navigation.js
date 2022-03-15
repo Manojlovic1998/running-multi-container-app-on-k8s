@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Navbar, Container, Row, Col } from "react-bootstrap";
 import NavSvgLogo from "../../assets/svg/nav-logo.svg";
+import NavAlert from "./NavAlert";
 const Navigation = () => {
   return (
     <Container fluid className={"px-0 shadow-sm"}>
@@ -20,6 +21,7 @@ const Navigation = () => {
           </Row>
         </Link>
       </Navbar>
+      <NavAlert />
     </Container>
   );
 };
