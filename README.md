@@ -96,6 +96,18 @@ data: [
 ]
 ```
 
+### **Formats of Data Sent to API**
+
+#### **Route `/api/values`**
+
+Method: Post  
+Data Type: JSON  
+Data Example:
+
+```JSON
+  {"index": "3"}
+```
+
 ### **Server/API ExpressJS App**
 
 The Express server serves as api layer that communicates with Redis and Postgres and passes information to the React app from them.
