@@ -2,24 +2,6 @@
 
 This is Docker example project of multi-container application. A topic of the project is a very basic implementation of fib function to calculate the fib value.
 
-# Table of Contents
-
-- [:whale: Integration of Multi Container React App using Docker](#-whale--integration-of-multi-container-react-app-using-docker)
-- [Table of contents](#table-of-contents)
-  - [:office: Local Development Container Diagram](#-office--local-development-container-diagram)
-  - [:house: How to Run Project Locally](#-house--how-to-run-project-locally)
-  - [:pencil: Applications Writeup](#-pencil--applications-writeup)
-    - [**Client React App**](#--client-react-app--)
-    - [**Formats of Data Received from API**](#--formats-of-data-received-from-api--)
-      - [**Route `/api/values/all`**](#--route---api-values-all---)
-      - [**Route `/api/values/current`**](#--route---api-values-current---)
-    - [**Formats of Data Sent to API**](#--formats-of-data-sent-to-api--)
-      - [**Route `/api/values`**](#--route---api-values---)
-    - [**Server/API ExpressJS App**](#--server-api-expressjs-app--)
-    - [**Worker app**](#--worker-app--)
-    - [**Nginx**](#--nginx--)
-  - [:bulb: Technologies](#-bulb--technologies)
-
 ## :office: Local Development Container Diagram
 
 - Simple diagram of intercommunication between different container application instances.
