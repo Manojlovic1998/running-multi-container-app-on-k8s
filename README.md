@@ -57,9 +57,9 @@ Client is a frontend Fibonacci index number value calculator application. It is 
 
 - [x] Home page
 - [x] Form for index input
-- [ ] Navigation bar with custom logo
+- [x] Navigation bar with custom logo
 - [x] Section containing seen indexes and calculated index values
-- [ ] Responsive design
+- [x] Responsive design
 - [x] Api calls to ExpressJS api app.
 
 ### **Server/API ExpressJS App**
