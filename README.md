@@ -62,6 +62,40 @@ Client is a frontend Fibonacci index number value calculator application. It is 
 - [x] Responsive design
 - [x] Api calls to ExpressJS api app.
 
+### **Formats of Data Received from API**
+
+#### **Route `/api/values/all`**
+
+**Seen Indices**  
+Method: Get  
+Data Type: Object  
+Data Example:
+
+```JavaScript
+data: {
+  0: "1"
+  3: "3"
+  4: "5"
+  6: "13"
+}
+```
+
+#### **Route `/api/values/current`**
+
+**Seen Indexes**  
+Method: Get  
+Data Type: Array  
+Data Example:
+
+```JavaScript
+data: [
+  0: 3
+  1: 4
+  2: 6
+  3: 0
+]
+```
+
 ### **Server/API ExpressJS App**
 
 The Express server serves as api layer that communicates with Redis and Postgres and passes information to the React app from them.
