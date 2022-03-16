@@ -18,6 +18,22 @@ This is Docker example project of multi-container application. A topic of the pr
 - Simple diagram of intercommunication between different container application instances.
   ![Diagram preview of intercommunication between applications](/assets/diagrams/docker-fib-calc.drawio.png)
 
+## :house: How to Run Project Locally
+
+To run the project locally you will need to:
+
+1. Clone the repository  
+   `git clone https://github.com/Manojlovic1998/docker-fib-calculator.git`
+2. Make sure you have Docker & Docker Compose installed on your system. If not you can use the following links [Docker](https://docs.docker.com/get-docker/), [Docker Compose](https://docs.docker.com/compose/install/) to set it up.
+3. After you have cloned the repo, go into projects' root directory.  
+   `cd docker-fib-calculator`
+4. You can run the project in development or production mode. To do so run one of the following commands.  
+    **Development**  
+    `sudo docker-compose -f docker-compose.yml -f docker-compose.dev.yml up`  
+   **Production**  
+   `sudo docker-compose up`
+5. You can visit the client application by going to `http://localhost:8080/`
+
 ## :pencil: Applications Writeup
 
 ### **Client React App**
