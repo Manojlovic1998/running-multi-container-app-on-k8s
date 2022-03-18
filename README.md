@@ -1,6 +1,6 @@
-# :whale: Integration of Multi Container React App using Docker
+# :whale: Integration of Multi Container React App using Docker & Kubernetes
 
-This is Docker example project of multi-container application. A topic of the project is a very basic implementation of fib function to calculate the fib value.
+This is Kubernetes example project of multi-client image running on local Kubernetes Cluster. A topic of the project is a very basic implementation of fib function to calculate the fib value.
 
 ## :office: Local Development Container Diagram
 
