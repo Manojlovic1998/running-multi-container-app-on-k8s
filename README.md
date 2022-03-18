@@ -179,6 +179,7 @@ server {
 <br>
 ![Nginx Icon](/assets/technologies/nginx.png)
 ![Docker Icon](/assets/technologies/docker.png)
+![Kubernetes Icon](/assets/technologies/kubernetes.png)
 ![React Icon](/assets/technologies/react.png)
 ![Redis Icon](/assets/technologies/redis.png)
 ![Express Icon](/assets/technologies/expressjs.png)
