@@ -11,7 +11,7 @@ RUN npm install
 
 COPY --chown=node:node . .
 
-CMD ["npm", "run", "start"]
+RUN npm run build
 
 FROM nginx
 EXPOSE 3000
