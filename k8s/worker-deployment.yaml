@@ -13,5 +13,10 @@ spec:
         app: fib-worker
     spec:
       containers:
-      - name: worker
-        image: manojlovic1998/fib-worker
+        - name: worker
+          image: manojlovic1998/fib-worker
+          env:
+            - name: REDIS_HOST
+              value: redis-cluster
+            - name: REDIS_PORT
+              value: "6379"
