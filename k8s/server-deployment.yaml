@@ -13,7 +13,25 @@ spec:
         app: expressApi
     spec:
       containers:
-      - name: server
-        image: manojlovic1998/fib-server
-        ports:
-        - containerPort: 5000
+        - name: server
+          image: manojlovic1998/fib-server
+          ports:
+            - containerPort: 5000
+          env:
+            - name: REDIS_HOST
+              value: redis-cluster
+            - name: REDIS_PORT
+              value: "6379"
+            - name: PGUSER
+              value: postgres
+            - name: PGHOST
+              value: postgres-service
+            - name: PGPORT
+              value: postgres-service
+            - name: PGDATABASE
+              value: postgres
+            - name: PGPASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: pgpassword
+                  key: PGPASSWORD
