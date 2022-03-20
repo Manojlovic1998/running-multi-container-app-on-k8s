@@ -15,10 +15,6 @@ spec:
       containers:
       - name: client
         image: manojlovic1998/fib-client
-        resources:
-          requests:
-            cpu: "0.3"
-            memory: 
         ports:
         - containerPort: 3000
 
