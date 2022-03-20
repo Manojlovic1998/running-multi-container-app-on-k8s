@@ -6,5 +6,5 @@ spec:
   selector:
     app: postgres-deployment
   ports:
-  - port: 5432
-    targetPort: 5432
+    - port: 5432
+      targetPort: 5432
