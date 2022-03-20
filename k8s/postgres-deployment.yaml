@@ -13,14 +13,20 @@ spec:
         app: postgres
     spec:
       containers:
-      - name: postgres
-        image: postgres:latest
-        ports:
-        - containerPort: 5432
-        volumeMounts:
-          - name: postgres-storage
-            mountPath: /var/lib/postgresql/data
-            subPath: postgres
+        - name: postgres
+          image: postgres:latest
+          ports:
+            - containerPort: 5432
+          volumeMounts:
+            - name: postgres-storage
+              mountPath: /var/lib/postgresql/data
+              subPath: postgres
+          env:
+            - name: POSTGRES_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: pgpassword
+                  key: PGPASSWORD
       volumes:
         - name: postgres-storage
           persistentVolumeClaim:
