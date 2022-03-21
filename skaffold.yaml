@@ -1,0 +1,40 @@
+apiVersion: skaffold/v2beta28
+kind: Config
+deploy:
+  kubectl:
+    manifests:
+      - ./k8s/*
+metadata:
+  name: microservices
+build:
+  local:
+    push: false
+  artifacts:
+    - image: manojlovic1998/fib-client
+      context: client
+      docker:
+        dockerfile: Dockerfile.dev
+      sync:
+        manual:
+          - dest: .
+            src: "src/**/*.js"
+          - dest: .
+            src: "**src/**/*.css"
+          - dest: .
+            src: "src/**/*.html"
+    - image: manojlovic1998/fib-worker
+      context: worker
+      docker:
+        dockerfile: Dockerfile.dev
+      sync:
+        manual:
+          - dest: .
+            src: "*.js"
+    - image: manojlovic1998/fib-server
+      context: server
+      docker:
+        dockerfile: Dockerfile.dev
+      sync:
+        manual:
+          - dest: .
+            src: "*.js"
