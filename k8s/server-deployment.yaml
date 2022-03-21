@@ -27,7 +27,7 @@ spec:
             - name: PGHOST
               value: postgres-service
             - name: PGPORT
-              value: postgres-service
+              value: "5432"
             - name: PGDATABASE
               value: postgres
             - name: PGPASSWORD
