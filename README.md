@@ -1,6 +1,10 @@
 # :whale: Integration of Multi Container React App using Docker & Kubernetes
 
-This is Kubernetes example project of multi-client image running on local Kubernetes Cluster. A topic of the project is orchestrating a fib. number calculator with the use of Kubernetes.
+This is Kubernetes example project of multi-container images running on local Kubernetes Cluster. A topic of the project is orchestrating a fib. number calculator with the use of Kubernetes.
+
+The images used for this project are derived from a previous project that I have done. These images have been pushed to my docker hub profile.
+
+_Previous Project Repo_: [Docker Fib Calculator](https://github.com/Manojlovic1998/docker-fib-calculator)
 
 ## :office: General K8s Architecture Diagram of The App
 
