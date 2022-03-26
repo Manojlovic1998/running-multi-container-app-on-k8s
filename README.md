@@ -1,4 +1,4 @@
-# :whale: Integration of Multi Container React App using Docker & Kubernetes
+# :whale: Integration of Multi Container App using Kubernetes
 
 This is Kubernetes example project of multi-container images running on local Kubernetes Cluster. A topic of the project is orchestrating a fib. number calculator with the use of Kubernetes.
 
