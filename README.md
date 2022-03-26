@@ -4,7 +4,8 @@ This is Kubernetes example project of multi-container images running on local Ku
 
 The images used for this project are derived from a previous project that I have done. These images have been pushed to my docker hub profile.
 
-_Previous Project Repo_: [Docker Fib Calculator](https://github.com/Manojlovic1998/docker-fib-calculator)
+_Previous Project Repo_: [Docker Fib Calculator](https://github.com/Manojlovic1998/docker-fib-calculator)  
+_My Docker Hub Profile_: [DockerHub](https://hub.docker.com/u/manojlovic1998)
 
 ## :office: General K8s Architecture Diagram of The App
 
