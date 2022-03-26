@@ -14,19 +14,34 @@ _My Docker Hub Profile_: [DockerHub](https://hub.docker.com/u/manojlovic1998)
 
 ## :house: How to Run Project Locally
 
+### Linux Ubuntu
+
+_The following explanation is meant for linux systems_
+
 To run the project locally you will need to:
 
+#### Viewing Setup
+
 1. Clone the repository  
-   `git clone https://github.com/Manojlovic1998/docker-fib-calculator.git`
+   `git clone https://github.com/Manojlovic1998/running-multi-container-app-on-k8s`
 2. Make sure you have Docker & Docker Compose installed on your system. If not you can use the following links [Docker](https://docs.docker.com/get-docker/), [Docker Compose](https://docs.docker.com/compose/install/) to set it up.
-3. After you have cloned the repo, go into projects' root directory.  
-   `cd docker-fib-calculator`
-4. You can run the project in development or production mode. To do so run one of the following commands.  
-    **Development**  
-    `sudo docker-compose -f docker-compose.yml -f docker-compose.dev.yml up`  
-   **Production**  
-   `sudo docker-compose up`
-5. You can visit the client application by going to `http://localhost:8080/`
+3. Make sure you have [kubernetes](https://ubuntu.com/kubernetes/install), [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/) and [minikube](https://minikube.sigs.k8s.io/docs/start/) installed.
+4. After you have cloned the repo, go into projects' root directory.  
+   `cd running-multi-container-app-on-k8s `
+5. Start your minikube.  
+   `minikube start`
+6. Once your minikube is up an running you can apply projects' configuration.  
+   `kubectl apply -f k8s`
+7. View the build live from minikube dashboard or run get commands followed by the object type you want to view status of.  
+   `minikube dashboard`  
+   _or_  
+   `kubectl get <object_type>`
+8. Once everything is up and running you can visit the client application by going to minikubes ip address. To get the address run.  
+   `minikube ip`
+9. Type in your browser search bar the ip address.  
+   `http://<minikube_ip>/`
+
+#### Additional Optional Setup
 
 ## :pencil: Applications Writeup
 
