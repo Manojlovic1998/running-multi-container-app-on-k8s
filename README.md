@@ -7,7 +7,7 @@ The images used for this project are derived from a previous project that I have
 _Previous Project Repo_: [Docker Fib Calculator](https://github.com/Manojlovic1998/docker-fib-calculator)  
 _My Docker Hub Profile_: [DockerHub](https://hub.docker.com/u/manojlovic1998)
 
-## :office: General K8s Architecture Diagram of The App
+## :office: General Kubernetes Architecture Diagram of The App
 
 - Simple diagram of intercommunication between different clusters of application instances.
   ![Diagram preview of intercommunication between applications](/assets/diagrams/general-architecture-k8s.png)
