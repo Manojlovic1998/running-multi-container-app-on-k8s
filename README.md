@@ -18,6 +18,9 @@ _My Docker Hub Profile_: [DockerHub](https://hub.docker.com/u/manojlovic1998)
 
 _The following explanation is meant for linux systems_
 
+_**Note:**_
+_There are two ways in which you can run the application. First way makes use of kubectl and minikube. Any changes made to the app directories such as client, worker or server won't be reflected on the deployed pod versions of the same application. The second way which is an optional setup, allows for you to make changes to the source code. This is allowed by the use of skaffold that tracks the root directories and everything within them._
+
 To run the project locally you will need to:
 
 #### Viewing Setup
